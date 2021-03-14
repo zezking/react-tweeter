@@ -36,9 +36,20 @@
   width: 5em;
   height: 5em;
 }
+
+.save-retweet-like{
+  display: flex;
+}
+
+.icon{
+  margin: 0.1rem;
+}
+
+
 .tweet-feed footer {
   font-size: 0.7em;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .tweet-feed p {
@@ -83,6 +94,10 @@
   .user-ID {
     display: block;
     font-size: 0.8em;
+  }
+
+  .tweet-feed a {
+  
   }
 
   .tweet-feed p {

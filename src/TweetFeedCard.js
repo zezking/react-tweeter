@@ -33,11 +33,15 @@ const TweetFeedCard = (props) => {
       <footer>
         <time>{props.created_at}</time>
         <div className="save-retweet-like">
-          <FontAwesomeIcon icon={faBookmark} />
-          <FontAwesomeIcon icon={faRetweet} />
-          <FontAwesomeIcon icon={faHeart} />
-
-          <i className="fas fa-heart"></i>
+          <div className="icon bookmark">
+            <FontAwesomeIcon icon={faBookmark} />
+          </div>
+          <div className="icon retweet">
+            <FontAwesomeIcon icon={faRetweet} />
+          </div>
+          <div className="icon like">
+            <FontAwesomeIcon icon={faHeart} />
+          </div>
         </div>
       </footer>
     </article>

@@ -1,7 +1,7 @@
 import React from "react";
 import TweetFeedCard from "./TweetFeedCard";
 //export helpfer function with destructuring
-import { ConvertTime } from "./helpers";
+import { ConvertTime } from "./Helpers";
 const TweetFeed = (props) => {
   const tweetList = props.tweets.map((tweet, key) => {
     return (

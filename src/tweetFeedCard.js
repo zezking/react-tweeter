@@ -1,5 +1,9 @@
 import React from "react";
 import "./tweetFeedCard.css";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faRetweet } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const randomProfile = [
   "https://picsum.photos/200?random=1",
   "https://picsum.photos/200?random=2",
@@ -10,7 +14,6 @@ const randomProfile = [
 ];
 const TweetFeedCard = (props) => {
   const tweetList = props.tweets.map((tweet) => {
-    console.log(tweet.content.text);
     return (
       <article className="tweet-feed">
         <header>
@@ -31,8 +34,10 @@ const TweetFeedCard = (props) => {
         <footer>
           <time>tweet.created_at</time>
           <div className="save-retweet-like">
-            <i className="fas fa-bookmark"></i>
-            <i className="fas fa-retweet"></i>
+            <FontAwesomeIcon icon={faBookmark} />
+            <FontAwesomeIcon icon={faRetweet} />
+            <FontAwesomeIcon icon={faHeart} />
+
             <i className="fas fa-heart"></i>
           </div>
         </footer>

@@ -1,0 +1,78 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+  font-weight: 300;
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+button:focus {
+  outline: none;
+}
+h2 {
+  color: #171717;
+  font-size: 0.8em;
+}
+
+body {
+
+  background-color: #FFFFFF;
+  
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  background-color: #FFFFFF;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scroll-up-button button {
+  height: 50px;
+  width: 50px;
+  background-color: #ffc068;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+  display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  .main-content {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 65em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main-content {
+    margin-top: 8em;
+  }
+  html {
+    display: flex;
+  }
+}

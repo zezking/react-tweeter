@@ -5,12 +5,12 @@ export const ConvertTime = (pastTime) => {
   let howLongAgo = created - now;
   // Convert to a positive integer
 
-  var getHumanTime = function (timestamp) {
+  let getHumanTime = function (timestamp) {
     // Convert to a positive integer
-    var time = Math.abs(timestamp);
+    let time = Math.abs(timestamp);
 
     // Define humanTime and units
-    var humanTime, units;
+    let humanTime, units;
 
     // If there are years
     if (time > 1000 * 60 * 60 * 24 * 365) {

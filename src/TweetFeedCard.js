@@ -13,6 +13,8 @@ const randomProfile = [
   "https://picsum.photos/200?random=6",
 ];
 const TweetFeedCard = (props) => {
+  console.log(props);
+  console.log(props.created_at);
   return (
     <article className="tweet-feed">
       <header>
@@ -31,7 +33,7 @@ const TweetFeedCard = (props) => {
       </header>
       <p>{props.content}</p>
       <footer>
-        <time>{props.created_at}</time>
+        <time>{props["created_at"]}</time>
         <div className="save-retweet-like">
           <div className="icon bookmark">
             <FontAwesomeIcon icon={faBookmark} />

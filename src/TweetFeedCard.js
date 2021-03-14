@@ -1,5 +1,5 @@
 import React from "react";
-import "./tweetFeedCard.css";
+import "./TweetFeedCard.css";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";

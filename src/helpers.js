@@ -1,4 +1,4 @@
-export const convertTime = (pastTime) => {
+export const ConvertTime = (pastTime) => {
   // 1575909015000
   const now = new Date().getTime();
   const created = pastTime;

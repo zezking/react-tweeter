@@ -1,7 +1,7 @@
-import TweetFeed from "./tweetFeed";
-import tweets from "./tweets.json";
+import TweetFeed from "./TweetFeed";
+import Tweets from "./tweets.json";
 import "./App.css";
 const App = () => {
-  return <TweetFeed tweets={tweets} />;
+  return <TweetFeed tweets={Tweets} />;
 };
 export default App;

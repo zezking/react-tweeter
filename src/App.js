@@ -1,7 +1,7 @@
-import TweetFeedCard from "./tweetFeedCard";
+import TweetFeed from "./tweetFeed";
 import tweets from "./tweets.json";
 import "./App.css";
 const App = () => {
-  return <TweetFeedCard tweets={tweets} />;
+  return <TweetFeed tweets={tweets} />;
 };
 export default App;

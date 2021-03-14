@@ -1,13 +1,8 @@
 import TweetFeedCard from "./tweetFeedCard";
-const randomProfile = [
-  "https://picsum.photos/200?random=1",
-  "https://picsum.photos/200?random=2",
-  "https://picsum.photos/200?random=3",
-  "https://picsum.photos/200?random=4",
-  "https://picsum.photos/200?random=5",
-  "https://picsum.photos/200?random=6",
-];
+import tweets from "./tweets.json";
+console.log(tweets);
+
 const App = () => {
-  return <TweetFeedCard />;
+  return <TweetFeedCard tweets={tweets} />;
 };
 export default App;

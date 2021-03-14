@@ -13,8 +13,6 @@ const randomProfile = [
   "https://picsum.photos/200?random=6",
 ];
 const TweetFeedCard = (props) => {
-  console.log(props);
-  console.log(props.created_at);
   return (
     <article className="tweet-feed">
       <header>

@@ -16,7 +16,9 @@ export const App = () => {
     const newTweet = {
       user: {
         name: "Sori Han",
-        avatars: "https://picsum.photos/200?random=20",
+        avatars: `https://picsum.photos/200?random=${Math.floor(
+          Math.random() * 100
+        )}`,
         handle: "@soriSJ",
       },
       content: {

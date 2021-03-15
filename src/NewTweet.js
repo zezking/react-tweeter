@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import "./NewTweet.css";
 
-export const NewTweet = () => {
-  const [tweetText, setTweetText] = useState("Hello Please type something");
+export const NewTweet = (props) => {
+  const { addNewTweet } = props;
+  const [tweetText, setTweetText] = useState("");
+  const tweetRemainingLength = 140 - tweetText.length;
+  const spanStyle = { color: tweetRemainingLength > 0 ? "black" : "red" };
+  const submitTweet = (event) => {
+    event.preventDefault();
+
+    if (tweetRemainingLength >= 0 && tweetRemainingLength < 140) {
+      addNewTweet(tweetText);
+      setTweetText("");
+    }
+  };
   return (
     <section className="new-tweet">
       <div className="subtitle">
@@ -10,7 +21,7 @@ export const NewTweet = () => {
           <i className="fas fa-angle-right"></i>Compose Tweet
         </h2>
       </div>
-      <form method="POST" action="/tweets">
+      <form onSubmit={submitTweet} method="POST" action="/tweets">
         <div className="input">
           <div className="label">
             <label htmlFor="tweet-text">What are you humming about?</label>
@@ -32,7 +43,7 @@ export const NewTweet = () => {
               htmlFor="tweet-text"
               id="counter"
             >
-              {140 - tweetText.length}
+              <span style={spanStyle}>{140 - tweetText.length}</span>
             </output>
           </div>
         </div>

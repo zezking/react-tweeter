@@ -12,15 +12,15 @@ const profile = "https://picsum.photos/200?random=1";
 export const App = () => {
   const [tweetsData, setTweetData] = useState(initialTWeetData);
 
-  const addNewTweet = () => {
+  const addNewTweet = (text) => {
     const newTweet = {
       user: {
-        name: "Haha Shi",
+        name: "Sori Han",
         avatars: "https://picsum.photos/200?random=20",
         handle: "@soriSJ",
       },
       content: {
-        text: "I love Refridrators",
+        text,
       },
       created_at: 1615619926979,
     };
@@ -40,14 +40,14 @@ export const App = () => {
     );
   });
   return (
-    <div className="App" onClick={addNewTweet}>
+    <div className="App">
       <div className="top-nav">
         <Navigation />
       </div>
       <div className="main-content">
         <Header avatar={profile} firstName="Sori" lastName="Han" />
         <main className="container">
-          <NewTweet />
+          <NewTweet addNewTweet={addNewTweet} />
           <section className="new-tweet-feed">
             <div className="new-tweet-post">{tweets}</div>
           </section>

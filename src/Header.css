@@ -21,7 +21,7 @@
   font-weight: 600;
 }
 .username h2 {
-  margin-top: -2.5em;
+  margin-top: -0.5em;
   font-weight: 300;
   font-size: 1em;
 }
@@ -32,6 +32,10 @@
     height: 12em;
     margin: 9em 0 2em auto;
     border-radius: 50%;
+  }
+  .user-header h2 {
+    margin-top: -3rem;
+    font-size: 1.4em;
   }
 
   .user-header img {
@@ -50,6 +54,7 @@
     margin: 0;
   }
   .user-header h2 {
+    margin-top: 0;
     font-size: 1.4em;
   }
 }

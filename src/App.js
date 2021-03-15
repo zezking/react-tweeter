@@ -10,7 +10,7 @@ import { Header } from "./Header";
 const TweetsObj = Tweets;
 console.log(TweetsObj);
 const profile = "https://picsum.photos/200?random=1";
-const App = () => {
+export const App = () => {
   return (
     <div className="App">
       <div className="top-nav">
@@ -30,4 +30,3 @@ const App = () => {
     </div>
   );
 };
-export default App;

@@ -5,4 +5,4 @@ Clone Project > npm start
 ```
 
 DEMO
-!["Screenshot"]
+![newTweet](./demo/newTweet.gif)

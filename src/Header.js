@@ -3,7 +3,7 @@ import "./Header.css";
 export const Header = (props) => {
   return (
     <header className="user-header">
-      <img src={props.avatar} />
+      <img src={props.avatar} alt="User Profile" />
 
       <br />
       <div className="username">

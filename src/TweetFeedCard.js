@@ -1,11 +1,6 @@
 import React from "react";
 import "./TweetFeedCard.css";
 
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faRetweet } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 export const TweetFeedCard = (props) => {
   return (
     <article className="tweet-feed">
@@ -20,17 +15,11 @@ export const TweetFeedCard = (props) => {
       </header>
       <p>{props.content}</p>
       <footer>
-        <time>{props["created_at"]}</time>
+        <time>{props.created_at}</time>
         <div className="save-retweet-like">
-          <div className="icon bookmark">
-            <FontAwesomeIcon icon={faBookmark} />
-          </div>
-          <div className="icon retweet">
-            <FontAwesomeIcon icon={faRetweet} />
-          </div>
-          <div className="icon like">
-            <FontAwesomeIcon icon={faHeart} />
-          </div>
+          <i className="fas fa-bookmark"></i>
+          <i className="fas fa-retweet"></i>
+          <i className="fas fa-heart"></i>
         </div>
       </footer>
     </article>

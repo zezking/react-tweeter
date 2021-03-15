@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navigation.css";
 
-const Navigation = () => {
+export const Navigation = () => {
   return (
     <nav className="top-nav">
       <a className="logo" href="/">
@@ -16,5 +16,3 @@ const Navigation = () => {
     </nav>
   );
 };
-
-export default Navigation;

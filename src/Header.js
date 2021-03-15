@@ -1,6 +1,6 @@
 import React from "react";
-
-const Header = (props) => {
+import "./Header.css";
+export const Header = (props) => {
   return (
     <header className="user-header">
       <img src={props.avatar} />
@@ -15,5 +15,3 @@ const Header = (props) => {
     </header>
   );
 };
-
-export default Header;

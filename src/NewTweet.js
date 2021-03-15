@@ -1,7 +1,7 @@
 import React from "react";
 import "./NewTweet.css";
 
-const NewTweet = () => {
+export const NewTweet = () => {
   return (
     <section class="new-tweet">
       <div class="subtitle">
@@ -37,5 +37,3 @@ const NewTweet = () => {
     </section>
   );
 };
-
-export default NewTweet;

@@ -2,20 +2,21 @@ import React from "react";
 import "./TweetFeedCard.css";
 
 export const TweetFeedCard = (props) => {
+  const { avatars, name, id, content, created_at } = props;
   return (
     <article className="tweet-feed">
       <header>
         <div className="user-profile-name">
-          <img src={props.avatars} alt="" />
-          <span className="username">{props.name}</span>
+          <img src={avatars} alt="" />
+          <span className="username">{name}</span>
         </div>
         <a className="user-ID" href="/">
-          {props.id}
+          {id}
         </a>
       </header>
-      <p>{props.content}</p>
+      <p>{content}</p>
       <footer>
-        <time>{props.created_at}</time>
+        <time>{created_at}</time>
         <div className="save-retweet-like">
           <i className="fas fa-bookmark"></i>
           <i className="fas fa-retweet"></i>

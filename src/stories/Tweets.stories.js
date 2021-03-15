@@ -78,14 +78,5 @@ export const populatedTweet = () => {
     },
   ];
 
-  return (
-    <TweetFeedCard
-      key={1}
-      avatars={singleTweet.user.avatars}
-      name={singleTweet.user.name}
-      id={singleTweet.user.handle}
-      content={singleTweet.content.text}
-      created_at={singleTweet.created_at}
-    />
-  );
+  return <TweetFeed tweetsData={tweets} />;
 };

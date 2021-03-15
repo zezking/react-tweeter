@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NewTweet.css";
 
 export const NewTweet = () => {
+  const [tweetText, setTweetText] = useState("Hello Please type something");
   return (
     <section className="new-tweet">
       <div className="subtitle">
@@ -16,6 +17,8 @@ export const NewTweet = () => {
           </div>
 
           <textarea
+            value={tweetText}
+            onChange={(event) => setTweetText(event.target.value)}
             placeholder="say something nice!"
             name="text"
             id="tweet-text"
@@ -29,7 +32,7 @@ export const NewTweet = () => {
               htmlFor="tweet-text"
               id="counter"
             >
-              140
+              {140 - tweetText.length}
             </output>
           </div>
         </div>

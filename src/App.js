@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import TweetFeed from "./TweetFeed";
 import Tweets from "./tweets.json";
 import "./App.css";
 
@@ -9,22 +8,25 @@ import { Header } from "./Header";
 import { TweetFeedCard } from "./TweetFeedCard";
 import { ConvertTime } from "./Helpers";
 let initialTWeetData = Tweets;
-
-console.log(initialTWeetData);
-
 const profile = "https://picsum.photos/200?random=1";
 export const App = () => {
   const [tweetsData, setTweetData] = useState(initialTWeetData);
 
   const addNewTweet = () => {
-    const newTWeet = {
-      name: "Sori Han",
-      handle: "@hansoriCS",
-      profile_image: "https://picsum.photos/200?random=20",
-      text: "I LOVE REFRIDRATORS!",
-      data: "10 days ago",
+    const newTweet = {
+      user: {
+        name: "Haha Shi",
+        avatars: "https://picsum.photos/200?random=20",
+        handle: "@soriSJ",
+      },
+      content: {
+        text: "I love Refridrators",
+      },
+      created_at: 1615619926979,
     };
+    setTweetData([newTweet, ...tweetsData]);
   };
+
   const tweets = tweetsData.map((tweetsData, key) => {
     return (
       <TweetFeedCard
@@ -38,7 +40,7 @@ export const App = () => {
     );
   });
   return (
-    <div className="App">
+    <div className="App" onClick={addNewTweet}>
       <div className="top-nav">
         <Navigation />
       </div>

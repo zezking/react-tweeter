@@ -5,9 +5,7 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { RandomAvatars } from "./RandomAvatars";
 
-const profile = RandomAvatars();
 export const TweetFeedCard = (props) => {
   return (
     <article className="tweet-feed">
